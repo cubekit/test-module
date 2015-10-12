@@ -1,6 +1,6 @@
 {
   "name": "cubekit-test-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Just a test of `npm publish`",
   "main": "dist/index.js",
   "scripts": {
