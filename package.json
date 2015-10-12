@@ -2,18 +2,47 @@
   "name": "cubekit-test-module",
   "version": "1.0.1",
   "description": "Just a test of `npm publish`",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npm run test:unit"
+    "clean": "rimraf lib dist",
+    "build": "babel src --out-dir lib",
+    "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch karma.config.js",
+    "test:watch": "node ./node_modules/karma/bin/karma start --auto-watch --no-single-run karma.config.js",
+    "prepublish": "npm run test && npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:cubekit/test-module.git"
+    "url": "https://github.com/cubekit/test-module"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cubekit/test-module/issues"
   },
-  "homepage": "https://github.com/cubekit/test-module"
+  "homepage": "https://github.com/cubekit/test-module",
+  "devDependencies": {
+    "babel": "^5.5.8",
+    "babel-core": "^5.6.18",
+    "babel-eslint": "^3.1.15",
+    "babel-loader": "^5.1.4",
+    "eslint": "^1.6.0",
+    "eslint-loader": "^1.1.0",
+    "expect": "^1.6.0",
+    "isparta": "^3.1.0",
+    "isparta-loader": "^1.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-chai-plugins": "^0.5.0",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-coverage": "^0.3.1",
+    "karma-mocha": "^0.1.10",
+    "karma-sinon": "^1.0.4",
+    "karma-spec-reporter": "0.0.19",
+    "karma-webpack": "^1.7.0",
+    "rimraf": "^2.3.4",
+    "webpack": "^1.9.6"
+  },
+  "dependencies": {
+    "invariant": "^2.0.0"
+  }
 }
