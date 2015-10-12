@@ -1,0 +1,19 @@
+{
+  "name": "cubekit-test-module",
+  "version": "1.0.0",
+  "description": "Just a test of `npm publish`",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run test:unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cubekit/test-module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cubekit/test-module/issues"
+  },
+  "homepage": "https://github.com/cubekit/test-module"
+}
